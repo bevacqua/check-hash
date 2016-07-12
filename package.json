@@ -1,6 +1,6 @@
 {
   "name": "check-hash",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ensure downloaded resources match expected hash of their contents.",
   "main": "index.js",
   "scripts": {
