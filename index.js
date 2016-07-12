@@ -15,7 +15,9 @@ function fromFile(file, expected, done) {
 }
 
 function fromBuffer (buffer, expected, done) {
-  var actual = crypto.createHash('md5').update(buffer).digest('hex');
+  var hash = expected.hash || 'md5';
+  expected = expected.expected || expected;
+  var actual = crypto.createHash(hash).update(buffer).digest('hex');
   if (actual !== expected) {
     done(null, false, actual);
     return;
